@@ -2,13 +2,14 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import headshot from '../images/headshot.jpg'
 import resume from '../pdfs/mairead-toms-resume.pdf'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 class Main extends React.Component {
 	render() {
 		let close = (
 			<div
 				className="close"
+				role="button"
+				tabIndex="0"
+				aria-label="close article"
 				onClick={() => {
 					this.props.onCloseArticle()
 				}}
@@ -38,19 +39,24 @@ class Main extends React.Component {
 								I’m a full-stack software developer always learning new stuff.
 								So far I’ve taken on everything from web development, to cloud
 								infrastructure, to DevOps, to Java microservices. Check out my
-								<a href={resume} target="_blank">
+								<a href={resume} target="_blank" rel="noreferrer">
 									{' '}
 									resume{' '}
 								</a>
 								,{' '}
 								<a
 									href="https://www.linkedin.com/in/mairead-toms-a44144107/"
+									rel="noreferrer"
 									target="_blank"
 								>
 									LinkedIn
 								</a>
 								, or{' '}
-								<a href="https://github.com/mtoms94" target="_blank">
+								<a
+									href="https://github.com/mtoms94"
+									target="_blank"
+									rel="noreferrer"
+								>
 									GitHub
 								</a>{' '}
 								to learn more about all that.
@@ -59,11 +65,11 @@ class Main extends React.Component {
 								Outside of work, I like to read, exercise, and travel. In
 								September 2019, I decided to leave my job to do more of all
 								three of those things. A one-way ticket to Bangkok became 6
-								months of traveling and 11 countries, including hiking in Nepal,
-								surfing in the Philippines, eating my way through Japan, and
-								seeing old friends in Spain. Since Coronavirus sent me home in
-								March, I’ve been volunteering at a local shelter and working on
-								some long-neglected side projects.
+								months of traveling and 11 countries visited, including hiking
+								in Nepal, surfing in the Philippines, eating my way through
+								Japan, and seeing old friends in Spain. Since Coronavirus sent
+								me home in March, I’ve been volunteering at a local shelter and
+								working on some long-neglected side projects.
 							</p>
 						</div>
 					</div>
@@ -86,6 +92,7 @@ class Main extends React.Component {
 								<a
 									href="mailto:maireadtoms@gmail.com"
 									target="_blank"
+									rel="noreferrer"
 									className="icon-label"
 								>
 									maireadtoms@gmail.com
@@ -99,6 +106,7 @@ class Main extends React.Component {
 							<a
 								href="https://www.linkedin.com/in/mairead-toms-a44144107/"
 								target="_blank"
+								rel="noreferrer"
 								className="icon-label"
 							>
 								LinkedIn
@@ -111,6 +119,7 @@ class Main extends React.Component {
 							<a
 								href="https://github.com/mtoms94"
 								target="_blank"
+								rel="noreferrer"
 								className="icon-label"
 							>
 								GitHub

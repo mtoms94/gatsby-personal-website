@@ -31,7 +31,7 @@ const Header = props => (
 				</li>
 				<li>
 					<button>
-						<a href={resume} target="_blank">
+						<a href={resume} target="_blank" rel="noreferrer">
 							{' '}
 							Resume{' '}
 						</a>
