@@ -39,6 +39,10 @@ const Layout = ({ children, location }) => {
 								content: "Mairead (Mai) Toms' personal website",
 							},
 							{ name: 'keywords', content: 'Mai Toms, Mairead Toms' },
+							{
+								name: 'google-site-verification',
+								content: 'NQXgPjbguXdZxdppQ2UsFHfx28qoLDQpnUpH5tYFo1w',
+							},
 						]}
 					>
 						<html lang="en" />
