@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import headshot from '../images/headshot.jpg'
+import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
 import resume from '../pdfs/mairead-toms-resume.pdf'
 class Main extends React.Component {
 	render() {
@@ -32,7 +33,10 @@ class Main extends React.Component {
 					<h2 className="major">Intro</h2>
 					<div className="article-content">
 						<span className="image main">
-							<img src={headshot} alt="Mai's headshot" />
+							<Img
+								fluid={this.props.file.childImageSharp.fluid}
+								alt="Mai's headshot"
+							/>
 						</span>
 						<div>
 							<p>
@@ -133,13 +137,42 @@ class Main extends React.Component {
 	}
 }
 
-Main.propTypes = {
+export default props => (
+	<StaticQuery
+		query={graphql`
+			query HeadShotQuery {
+				file(name: { eq: "headshot" }) {
+					childImageSharp {
+						fluid {
+							aspectRatio
+							base64
+							sizes
+							src
+							srcSet
+						}
+					}
+				}
+			}
+		`}
+		render={data => (
+			<Main
+				file={data.file}
+				route={PropTypes.object}
+				article={PropTypes.string}
+				articleTimeout={PropTypes.bool}
+				onCloseArticle={PropTypes.func}
+				timeout={PropTypes.bool}
+				setWrapperRef={PropTypes.func.isRequired}
+			/>
+		)}
+	/>
+)
+
+/* Main.propTypes = {
 	route: PropTypes.object,
 	article: PropTypes.string,
 	articleTimeout: PropTypes.bool,
 	onCloseArticle: PropTypes.func,
 	timeout: PropTypes.bool,
 	setWrapperRef: PropTypes.func.isRequired,
-}
-
-export default Main
+} */
