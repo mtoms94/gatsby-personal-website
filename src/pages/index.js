@@ -4,6 +4,7 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
+import BackgroundSection from '../components/BackgroundImage'
 
 class IndexPage extends React.Component {
 	constructor(props) {
@@ -93,22 +94,24 @@ class IndexPage extends React.Component {
 						this.state.isArticleVisible ? 'is-article-visible' : ''
 					}`}
 				>
-					<div id="wrapper">
-						<Header
-							onOpenArticle={this.handleOpenArticle}
-							timeout={this.state.timeout}
-						/>
-						<Main
-							isArticleVisible={this.state.isArticleVisible}
-							timeout={this.state.timeout}
-							articleTimeout={this.state.articleTimeout}
-							article={this.state.article}
-							onCloseArticle={this.handleCloseArticle}
-							setWrapperRef={this.setWrapperRef}
-						/>
-						<Footer timeout={this.state.timeout} />
-					</div>
-					<div id="bg"></div>
+					<BackgroundSection>
+						<div id="wrapper">
+							<Header
+								onOpenArticle={this.handleOpenArticle}
+								timeout={this.state.timeout}
+							/>
+							<Main
+								isArticleVisible={this.state.isArticleVisible}
+								timeout={this.state.timeout}
+								articleTimeout={this.state.articleTimeout}
+								article={this.state.article}
+								onCloseArticle={this.handleCloseArticle}
+								setWrapperRef={this.setWrapperRef}
+							/>
+							<Footer timeout={this.state.timeout} />
+						</div>
+						<div id="bg-overlay"></div>
+					</BackgroundSection>
 				</div>
 			</Layout>
 		)
