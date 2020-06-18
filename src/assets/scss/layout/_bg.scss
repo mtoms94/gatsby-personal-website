@@ -34,9 +34,10 @@
 		}
 	} */
 	.body.is-article-visible & {
-		@include vendor('transform', 'scale(1.082)');
-		backface-visibility: hidden;
-		-webkit-backface-visibility: hidden;
+		@include vendor('transform', 'scale(1.2)');
+		//-webkit-font-smoothing: antialiased
+		/* -webkit-backface-visibility: hidden;
+		-webkit-transform: translateZ(0) scale(1, 1); */
 		will-change: auto;
 		@include breakpoint(medium) {
 			@include vendor('transform', 'scale(1)');
