@@ -3,6 +3,18 @@ import React from 'react'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 
+const ImageWrapper = styled.div`
+	width: 40%;
+	//min-height: 80%;
+	display: block;
+	//padding: 0px 1.0875rem 1.45rem;
+	height: 50vh;
+	//max-height: 10vh;
+	// position: relative;
+	// float: left;
+	border: 0;
+`
+
 const Image = () => (
 	<StaticQuery
 		query={graphql`
@@ -24,33 +36,44 @@ const Image = () => (
 			// Set ImageData.
 			const imageData = data.file.childImageSharp.fluid
 			return (
+				//<ImageWrapper>
 				<Img
 					fixed={imageData}
 					alt="Mai's Headshot"
 					style={{
-						margin: '1rem',
-						maxHeight: 'calc(50vh - 4rem)',
+						margin: '.5rem 2rem .5rem 0',
 						border: '0',
-						position: 'relative',
+						display: 'inline-block',
+						aspectRatio: '1.5',
+						maxWidth: '224px',
+						maxHeight: '336px',
+						width: '35vw',
+						height: '52.5vw',
+						objectFit: 'contain',
 						float: 'left',
-						width: '40%',
-						height: '400px',
 					}}
-					imgStyle={{ objectFit: 'contain' }}
+					/* 					imgStyle={{
+						objectFit: 'contain',
+						display: 'block',
+						position: 'static',
+						width: '100%',
+						height: '100%',
+					}} */
 					//className="image main"
 				/>
+				//</ImageWrapper>
 			)
 		}}
 	/>
 )
 
 const StyledImage = styled(Image)`
-	picture > img {
+	/* picture > img {
 		height: auto !important;
 	}
 	> img {
 		height: auto !important;
-	}
+	} */
 `
 
 export default StyledImage
