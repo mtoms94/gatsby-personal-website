@@ -1,19 +1,6 @@
 import { StaticQuery, graphql } from 'gatsby'
 import React from 'react'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-
-const ImageWrapper = styled.div`
-	width: 40%;
-	//min-height: 80%;
-	display: block;
-	//padding: 0px 1.0875rem 1.45rem;
-	height: 50vh;
-	//max-height: 10vh;
-	// position: relative;
-	// float: left;
-	border: 0;
-`
 
 const Image = () => (
 	<StaticQuery
@@ -36,7 +23,6 @@ const Image = () => (
 			// Set ImageData.
 			const imageData = data.file.childImageSharp.fluid
 			return (
-				//<ImageWrapper>
 				<Img
 					fixed={imageData}
 					alt="Mai's Headshot"
@@ -52,28 +38,10 @@ const Image = () => (
 						objectFit: 'contain',
 						float: 'left',
 					}}
-					/* 					imgStyle={{
-						objectFit: 'contain',
-						display: 'block',
-						position: 'static',
-						width: '100%',
-						height: '100%',
-					}} */
-					//className="image main"
 				/>
-				//</ImageWrapper>
 			)
 		}}
 	/>
 )
 
-const StyledImage = styled(Image)`
-	/* picture > img {
-		height: auto !important;
-	}
-	> img {
-		height: auto !important;
-	} */
-`
-
-export default StyledImage
+export default Image
