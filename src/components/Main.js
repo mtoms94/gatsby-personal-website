@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import headshot from '../images/headshot.jpg'
+import Image from '../components/Image'
 import resume from '../pdfs/mairead-toms-resume.pdf'
 class Main extends React.Component {
 	render() {
@@ -31,9 +31,7 @@ class Main extends React.Component {
 				>
 					<h2 className="major">Intro</h2>
 					<div className="article-content">
-						<span className="image main">
-							<img src={headshot} alt="Mai's headshot" />
-						</span>
+						<Image></Image>
 						<div>
 							<p>
 								I’m a full-stack software developer always learning new stuff.
