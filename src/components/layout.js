@@ -36,7 +36,8 @@ const Layout = ({ children, location }) => {
 						meta={[
 							{
 								name: 'description',
-								content: "Mairead (Mai) Toms' personal website",
+								content:
+									"My name is Mairead Toms, but I mostly go by Mai. I'm a software developer and I made this website to tell you about myself (and so I could practice css).",
 							},
 							{ name: 'keywords', content: 'Mai Toms, Mairead Toms' },
 							{
