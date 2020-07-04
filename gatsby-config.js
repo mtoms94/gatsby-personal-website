@@ -2,7 +2,8 @@ module.exports = {
 	siteMetadata: {
 		title: 'Mai Toms - Developer',
 		author: 'Mai Toms',
-		description: "Mairead (Mai) Toms' personal website",
+		description:
+			"My name is Mairead Toms, but I mostly go by Mai. I'm a software developer and I made this website to tell you about myself (and so I could practice css).",
 	},
 	plugins: [
 		`gatsby-transformer-sharp`,

@@ -9,11 +9,7 @@ const Image = () => (
 				file(relativePath: { eq: "headshot.jpg" }) {
 					childImageSharp {
 						fluid(maxWidth: 225) {
-							aspectRatio
-							base64
-							sizes
-							src
-							srcSet
+							...GatsbyImageSharpFluid_withWebp
 						}
 					}
 				}
