@@ -7,7 +7,7 @@
 /* Header */
 
 #header {
-	@include vendor('transform', 'scale(1.125)');
+	//@include vendor('transform', 'scale(1.125)');
 	@include vendor('display', 'flex');
 	@include vendor('flex-direction', 'column');
 	@include vendor('align-items', 'center');

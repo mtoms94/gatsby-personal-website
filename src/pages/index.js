@@ -94,7 +94,7 @@ class IndexPage extends React.Component {
 						this.state.isArticleVisible ? 'is-article-visible' : ''
 					}`}
 				>
-					<BackgroundSection>
+					<BackgroundSection id="bg">
 						<div id="wrapper">
 							<Header
 								onOpenArticle={this.handleOpenArticle}
