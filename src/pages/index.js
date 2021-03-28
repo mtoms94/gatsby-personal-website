@@ -93,7 +93,6 @@ class IndexPage extends React.Component {
 						this.state.isArticleVisible ? 'is-article-visible' : ''
 					}`}
 				>
-<<<<<<< HEAD
 					<BackgroundSection id="bg">
 						<div id="wrapper">
 							<Header
@@ -112,24 +111,6 @@ class IndexPage extends React.Component {
 						</div>
 						<div id="bg-overlay"></div>
 					</BackgroundSection>
-=======
-					<div id="wrapper">
-						<Header
-							onOpenArticle={this.handleOpenArticle}
-							timeout={this.state.timeout}
-						/>
-						<Main
-							isArticleVisible={this.state.isArticleVisible}
-							timeout={this.state.timeout}
-							articleTimeout={this.state.articleTimeout}
-							article={this.state.article}
-							onCloseArticle={this.handleCloseArticle}
-							setWrapperRef={this.setWrapperRef}
-						/>
-						<Footer timeout={this.state.timeout} />
-					</div>
-					<div id="bg"></div>
->>>>>>> bfb431cbaf6a6af8ea2eadc8b5ec54ddf95cece2
 				</div>
 			</Layout>
 		)
