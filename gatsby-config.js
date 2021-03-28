@@ -10,6 +10,13 @@ module.exports = {
 		`gatsby-plugin-sharp`,
 		'gatsby-plugin-react-helmet',
 		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'https://maitoms.dev/',
+				policy: [{ userAgent: '*', disallow: '/static/*.pdf$' }],
+			},
+		},
+		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `img`,
