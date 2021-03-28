@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 import Header from '../components/Header'
 import Main from '../components/Main'
 import Footer from '../components/Footer'
-import BackgroundSection from '../components/StyledBackgroundSection'
+import StyledBackgroundSection from '../components/StyledBackgroundSection'
 
 class IndexPage extends React.Component {
 	constructor(props) {
@@ -89,7 +89,7 @@ class IndexPage extends React.Component {
 	render() {
 		return (
 			<Layout location={this.props.location}>
-				<BackgroundSection className='bg'>
+				<StyledBackgroundSection>
 					<div
 						className={`body ${this.state.loading} ${
 							this.state.isArticleVisible ? 'is-article-visible' : ''
@@ -111,7 +111,7 @@ class IndexPage extends React.Component {
 							<Footer timeout={this.state.timeout} />
 						</div>
 					</div>
-				</BackgroundSection>
+				</StyledBackgroundSection>
 			</Layout>
 		)
 	}

@@ -38,12 +38,13 @@ const BackgroundSection = ({ className, children }) => {
   )
 }
 
-/* const StyledBackgroundSection = styled(BackgroundSection)`
-  width: 100%;
-  background-position: bottom center;
-  background-repeat: repeat-y;
-  background-size: cover;
-` */
+const StyledBackgroundSection = styled(BackgroundSection)`
+&::before,
+&::after{
+    transform: scale(1.125);
+    transition: transform .325s ease-in-out,filter .325s ease-in-out;
+}
+`
 
-export default BackgroundSection
+export default StyledBackgroundSection
 
