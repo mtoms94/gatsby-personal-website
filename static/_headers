@@ -1,0 +1,3 @@
+/static/*.pdf
+  # headers for that path:
+  X-Robots-Tag: noindex
