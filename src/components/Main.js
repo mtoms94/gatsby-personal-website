@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import headshot from '../images/headshot.jpg'
+import Image from '../components/Image'
 import resume from '../pdfs/mairead-toms-resume.pdf'
 class Main extends React.Component {
 	render() {
@@ -31,9 +31,7 @@ class Main extends React.Component {
 				>
 					<h2 className="major">Intro</h2>
 					<div className="article-content">
-						<span className="image main">
-							<img src={headshot} alt="Mai's headshot" />
-						</span>
+						<Image></Image>
 						<div>
 							<p>
 								I’m a full-stack software developer always learning new stuff.
@@ -62,14 +60,7 @@ class Main extends React.Component {
 								to learn more about all that.
 							</p>
 							<p>
-								Outside of work, I like to read, exercise, and travel. In
-								September 2019, I decided to leave my job to do more of all
-								three of those things. A one-way ticket to Bangkok became 6
-								months of traveling and 11 countries visited, including hiking
-								in Nepal, surfing in the Philippines, eating my way through
-								Japan, and seeing old friends in Spain. Since Coronavirus sent
-								me home in March, I’ve been volunteering at a local shelter and
-								working on some long-neglected side projects.
+							Outside of work, I like to read, exercise, and travel. In September 2019, I decided to leave my job to do more of all three of those things. A one-way ticket to Bangkok became 6 months of traveling and 11 countries visited, including hiking in Nepal, surfing in the Philippines, eating my way through Japan, and seeing old friends in Spain. When COVID-19 sent me home in March, I began volunteering at a local shelter and working on some long-neglected side projects. In September 2020, after almost exactly a year off, I returned to Capital One excited to pick up where I left off.
 							</p>
 						</div>
 					</div>
